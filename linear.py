@@ -15,6 +15,7 @@
 #             elif math[0] in math:
 #                 print()
 # 7x-2=21
+
 def linearEquation(equation) :
     equation = equation.strip()
 
@@ -31,7 +32,7 @@ def linearEquation(equation) :
             if (j > b) :
                 total = (total + sign * int(equation[b: j]))
             b = j  
-            print(total) 
+            # print(total) 
         # when we have -x,+x,x
         elif (equation[j] == 'x') :       
             if ((b == j) or
@@ -50,7 +51,7 @@ def linearEquation(equation) :
                 total = (total + sign * int(equation[b: j]))
             sign = -1
             b = j + 1   
-            print(total)    
+            # print(total)    
    # for the number left at the end
     if (b < a) :
         total = (total + sign * int(equation[b: len(equation)]))
@@ -68,3 +69,22 @@ def linearEquation(equation) :
 equation = "7x-2=21"
 print ("x = {}" .
         format(linearEquation(equation)))
+
+
+  # index_of_equals =another.index('=')
+    # value_left = another[ :index_of_equals] 
+    # value_right = another[index_of_equals+1 :] 
+    # print(value_left,value_right) 
+    # sign=['=','+','-','*','/']
+    # new_index=value_right.index('x')
+    # for items in sign:
+    #     new_range=sign.index(items)
+    #     print(new_range)
+
+    # front_x=value_left[ :new_index +1 ] + value_right[ :new_index+1 ]
+    # value_left=front_x 
+    # print(front_x)
+        
+        
+    # print(compres_eq)
+# print(solve("2x + 45 = 3(x+2)+4") )

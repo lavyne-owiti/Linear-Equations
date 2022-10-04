@@ -1,9 +1,14 @@
 import unittest
-import linear
+import new
 
 class TestlinerEquations(unittest.TestCase):
     def testLinearEquation(self):
-        self.assertEqual(linear.linearEquation("2(4x + 3) + 6 = 24 -4x"),3)
+        self.assertEqual(new.solve("7x-2=21"),3)
+        
+    def testlinear2(self):
+        self.assertEqual(new.solve("2(4x + 3) + 6 = 24 -4x"),0)
+
+
 
         
         
