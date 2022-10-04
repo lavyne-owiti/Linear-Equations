@@ -65,6 +65,6 @@ def linearEquation(equation) :
     ans = -total / coefficient
     return int(ans)
  
-equation = "2(4x + 3) + 6 = 24 -4x"
+equation = "7x-2=21"
 print ("x = {}" .
         format(linearEquation(equation)))
