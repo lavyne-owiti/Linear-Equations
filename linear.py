@@ -14,8 +14,10 @@
 
 #             elif math[0] in math:
 #                 print()
-
+# 7x-2=21
 def linearEquation(equation) :
+    equation = equation.strip()
+
     a = len(equation)
     sign = 1
     coefficient = 0
@@ -28,7 +30,8 @@ def linearEquation(equation) :
         if (equation[j] == '+' or equation[j] == '-' or equation[j] == '*') :  
             if (j > b) :
                 total = (total + sign * int(equation[b: j]))
-            b = j   
+            b = j  
+            print(total) 
         # when we have -x,+x,x
         elif (equation[j] == 'x') :       
             if ((b == j) or
@@ -37,14 +40,17 @@ def linearEquation(equation) :
             elif (equation[j - 1] == '-') :
                 coefficient = coefficient - sign
             else :
+                print(equation[b: j])
                 coefficient = (coefficient + sign * int(equation[b: j]))
+                
             b = j + 1   
         # for the equals sign
         elif (equation[j] == '=') :
             if (j > b) :
                 total = (total + sign * int(equation[b: j]))
             sign = -1
-            b = j + 1       
+            b = j + 1   
+            print(total)    
    # for the number left at the end
     if (b < a) :
         total = (total + sign * int(equation[b: len(equation)]))
