@@ -62,7 +62,7 @@ def solve(eq):
   
     if (intercept < length_equation) :
         total = (total + sign * int(equation[intercept: len(equation)]))
-        print(f"Step 4:divide both side with the coefficient: \n{coefficient_of_x} = {total}")
+        print(f"Step 4:divide both side with the coefficient: \n{coefficient_of_x}x = {total}")
 
     if (coefficient_of_x == 0 and total == 0) :
         return "Infinite solutions" 
